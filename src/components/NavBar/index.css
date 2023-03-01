@@ -1,0 +1,33 @@
+.logo {
+  height: 50px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-name {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.score {
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 600;
+  padding-left: 10px;
+  font-weight: 20px;
+}
+
+@media (max-width: 767px) {
+  .score {
+    font-size: 10px;
+  }
+  .logo-name {
+    font-size: 15px;
+  }
+  .logo {
+    height: 35px;
+  }
+}

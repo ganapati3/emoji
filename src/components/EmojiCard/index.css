@@ -1,0 +1,28 @@
+.emoji-container {
+  background-color: #ffffff33;
+  height: 150px;
+  width: 150px;
+  border: 1px #ffffff33 solid;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.emoji-button {
+  background-color: transparent;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .emoji-container {
+    height: 60px;
+    width: 60px;
+  }
+  .emoji {
+    width: 30px;
+  }
+}
