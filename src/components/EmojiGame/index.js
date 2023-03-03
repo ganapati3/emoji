@@ -23,7 +23,7 @@ class EmojiGame extends Component {
     const {emojisList} = props
     this.state = {
       emojiList: emojisList,
-      score: -1,
+      score: 0,
       topScore: 0,
       lastClickedId: [],
       isSame: false,
@@ -34,7 +34,9 @@ class EmojiGame extends Component {
     const {emojiList} = this.state
     const shuffledEmojis = emojiList.sort(() => Math.random() - 0.5)
     this.setState(prevState => ({
-      score: prevState.score + 1,
+      score: !prevState.lastClickedId.includes(id)
+        ? prevState.score + 1
+        : prevState.score,
       isSame: prevState.lastClickedId.includes(id),
       lastClickedId: [...prevState.lastClickedId, id],
       emojiList: shuffledEmojis,
@@ -65,7 +67,7 @@ class EmojiGame extends Component {
           : topScore,
       lastClickedId: [],
       isSame: false,
-      score: -1,
+      score: 0,
     }))
   }
 
